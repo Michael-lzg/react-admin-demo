@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../../css/login.scss'
+import '../../css/login.css'
 import { Form, Input, Button } from 'antd'
 import { UserOutlined, CompassOutlined } from '@ant-design/icons'
 
