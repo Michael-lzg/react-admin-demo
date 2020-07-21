@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router';
 import '../../css/login.css'
 import { Form, Input, Button } from 'antd'
 import { UserOutlined, CompassOutlined } from '@ant-design/icons'
@@ -11,15 +12,15 @@ class Login extends Component {
     this.onFinishFailed = this.onFinishFailed.bind(this)
   }
 
-  onFinish(values) {
+  onFinish (values) {
     this.props.history.push('/admin/basic/table')
   }
 
-  onFinishFailed(errorInfo) {
+  onFinishFailed (errorInfo) {
     console.log('Failed:', errorInfo)
   }
 
-  render() {
+  render () {
     const layout = {
       labelCol: { span: 0 },
       wrapperCol: { span: 24 }
@@ -53,4 +54,4 @@ class Login extends Component {
   }
 }
 
-export default Login
+export default withRouter(Login)  

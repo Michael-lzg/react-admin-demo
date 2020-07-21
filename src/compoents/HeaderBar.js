@@ -19,7 +19,7 @@ class HeaderBar extends Component {
 
   clickMenu ({ key }) {
     if (key === '3') {
-      this.props.history.push('/login')
+      this.props.history.push('/')
     }
   }
 
