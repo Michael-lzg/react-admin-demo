@@ -1,0 +1,6 @@
+{
+  "presets": ["my-react-admin"],
+  "plugins": [
+    ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }]
+  ]
+}

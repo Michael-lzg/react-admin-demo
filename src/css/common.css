@@ -1,0 +1,336 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  background-color: #f2f2f6 !important;
+  color: black;
+  -webkit-text-size-adjust: 100%;
+}
+
+#page {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+}
+
+.dib {
+  display: inline-block;
+}
+
+.tc {
+  text-align: center;
+}
+
+.tr {
+  text-align: right;
+}
+
+.tl {
+  text-align: left;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.dn {
+  display: none;
+}
+
+.db {
+  display: block;
+}
+
+.pa {
+  position: absolute;
+}
+
+.pr {
+  position: relative;
+}
+
+.por {
+  position: relative;
+}
+
+.pf {
+  position: fixed;
+}
+
+.vm {
+  vertical-align: middle;
+}
+
+.vt {
+  vertical-align: top;
+}
+
+.vb {
+  vertical-align: bottom;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ws-nowrap {
+  white-space: nowrap;
+}
+
+.curp {
+  cursor: pointer;
+}
+
+/*iconfont初始大小*/
+
+.iconfont {
+  font-size: 16px;
+}
+
+.clearfix:after {
+  clear: both;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.c5 {
+  color: #555555 !important;
+}
+
+.c4 {
+  color: #40a9ff !important;
+}
+
+.c8 {
+  color: #888 !important;
+}
+
+::-webkit-input-placeholder {
+  color: #878d99;
+}
+
+:-moz-placeholder {
+  color: #878d99;
+}
+
+::-moz-placeholder {
+  color: #878d99;
+}
+
+:-ms-input-placeholder {
+  color: #878d99;
+}
+
+.c1 {
+  color: #409eff !important;
+}
+
+.bg1 {
+  background-color: #409eff !important;
+}
+
+.tip {
+  padding: 5px 0;
+}
+
+.mainPage {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 剩余滚动条样式 */
+
+::-webkit-scrollbar-track-piece {
+  width: 2px;
+  background-color: rgba(255, 255, 255, 1) !important;
+}
+
+/* 整体样式 */
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 10px;
+}
+
+/* 去掉input type=number箭头 */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* 滑块部分 */
+
+::-webkit-scrollbar-thumb {
+  height: 20px;
+  background: #e9e9e9;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e9e9e9;
+}
+
+/* 右边区域遮罩 */
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(36, 38, 44, 0.6);
+  z-index: 10000;
+}
+
+/* 提示框居中 */
+
+.ivu-message {
+  left: 110px !important;
+  z-index: 10001 !important;
+}
+
+.ivu-table th {
+  background-color: #f0f2f5 !important;
+}
+
+.ivu-table th span {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* 分页样式 */
+
+.ivu-page {
+  margin-top: 24px;
+  text-align: right;
+}
+
+.ivu-page span {
+  font-size: 14px;
+  color: #515a6e;
+}
+
+.ivu-page li.ivu-page-item-active {
+  background: #418bfb;
+}
+
+.ivu-page li.ivu-page-item-active a {
+  color: #fff;
+}
+
+.ivu-select-item:hover {
+  background: #ebf7ff;
+}
+
+.ivu-input,
+.ivu-input-number-input,
+.ivu-select-selection {
+  background-color: #f5f7f9 !important;
+}
+
+.tabBar {
+  padding: 0 24px;
+  background-color: #fff;
+}
+
+.tabBar .tabItem {
+  padding: 0 16px;
+  font-size: 14px;
+  line-height: 54px;
+  cursor: pointer;
+}
+
+.tabBar .tabItem.on {
+  color: #1890ff;
+  border-bottom: 2px solid#1890FF;
+}
+
+table {
+  width: 100% !important;
+}
+
+.ivu-modal-wrap {
+  overflow: hidden !important;
+}
+
+/* modal居中 */
+
+.ivu-modal {
+  display: flex;
+  height: 100%;
+  margin: auto !important;
+  left: 0;
+  right: 0;
+  top: initial !important;
+  align-items: center;
+  overflow: auto;
+}
+
+.ivu-modal-content {
+  width: 100%;
+}
+
+.ant-layout-content {
+  padding: 15px;
+  background-color: #fff;
+  margin: 10px;
+}
+
+.ant-table {
+  /* height: calc(100% - 300px) !important; */
+  overflow: auto;
+}
+
+.ant-layout-footer {
+  padding: 2px 0 12px 0 !important;
+}
+
+.ant-table thead>tr>th,
+.ant-table tbody>tr>td,
+.ant-table tfoot>tr>th,
+.ant-table tfoot>tr>td {
+  position: relative;
+  padding: 12px 10px !important;
+}
+
+.ant-tag {
+  cursor: pointer !important;
+}
+
+.mr {
+  margin-right: 30px;
+}
+
+.br50 {
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.halfBlock{
+  width: 50%;
+  height: 40%;
+  float: left;
+  padding-right: 10%;
+}
