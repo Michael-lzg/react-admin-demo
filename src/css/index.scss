@@ -1,0 +1,90 @@
+.mainPage {
+  // padding: 15px;
+  overflow: auto;
+  background-color: #f6f6f6 !important;
+  padding: 0 !important;
+}
+
+.inner {
+  height: 100%;
+  width: 100%;
+}
+
+.left-block {
+  width: 30%;
+}
+
+.left-top-block {
+  // height: 200px;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  // padding-left: 120px;
+  position: relative;
+
+  .img {
+
+    // position: absolute;
+    // left: 20px;
+    img {
+      border-radius: 120px;
+    }
+  }
+
+  .info {
+    // margin-left: 35px;
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 20px;
+
+    .job {
+      font-size: 16px;
+    }
+  }
+}
+
+.left-mid-block {
+  margin: 10px 0;
+  background-color: #fff;
+  padding: 15px;
+
+  .title {
+    font-size: 18px;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 5px;
+  }
+}
+
+.left-bot-block {
+  margin: 15px 0;
+  background-color: #fff;
+  padding: 15px;
+
+  .title {
+    font-size: 18px;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 5px;
+  }
+
+  .item {
+    width: 50%;
+    padding-bottom: 12px;
+
+    >img {
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
+}
+
+.right-block {
+  width: 70%;
+  padding-left: 15px;
+
+  .tab {
+    padding: 15px;
+    background-color: white;
+  }
+}

@@ -22,48 +22,48 @@ class BasicTable extends Component {
     this.toAdd = this.toAdd.bind(this)
   }
 
-  changeName(e) {
+  changeName (e) {
     e.persist()
     console.log(e)
     this.setState({
       name: e.target.value
     })
   }
-  changeTitle(val) {
+  changeTitle (val) {
     console.log(val)
     this.setState({
       title: val
     })
   }
-  changeDate(val, str) {
+  changeDate (val, str) {
     console.log(val)
     console.log(str)
     this.setState({
       date: str
     })
   }
-  toSearch() {
+  toSearch () {
     console.log(this.state)
     this.getList()
   }
-  delData(index) {
+  delData (index) {
     let that = this
     Modal.confirm({
       title: '温馨提示',
       content: '是否要删除这一行？',
       centered: true,
       onOk: () => {
-        let list = that.state.list
+        let list = [...that.state.list];
         list.splice(index, 1)
-        this.setState({
-          list: list
+        that.setState({
+          list: [...list]
         })
         console.log(this.state)
       }
     })
   }
 
-  resizeFun() {
+  resizeFun () {
     let h = window.innerHeight - document.getElementById('table').offsetTop - 160
     document.getElementById('innerTable').style.height = h + 'px'
     this.setState({
@@ -71,15 +71,15 @@ class BasicTable extends Component {
     })
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this.resizeFun()
   }
 
-  UNSAFE_componentWillMount() {
+  UNSAFE_componentWillMount () {
     this.getList()
   }
 
-  getList() {
+  getList () {
     this.setState({
       loading: true
     })
@@ -102,7 +102,7 @@ class BasicTable extends Component {
     }, 500)
   }
 
-  toAdd() {
+  toAdd () {
     this.setState({
       addPerson: true
     })
@@ -117,24 +117,26 @@ class BasicTable extends Component {
     this.Child.onFinish()
   }
 
-  handleCancel() {
+  handleCancel () {
     this.setState({
       addPerson: false
     })
   }
 
-  addData(values) {
+  addData (values) {
     console.log(values)
-    this.handleCancel()
-    let list = this.state.list
+    let list = [...this.state.list]
+    values.id = list.length + 1
     list.push(values)
     this.setState({
-      list: list
+      list: list,
+      addPerson: false
     })
+    console.log(this.state)
   }
 
 
-  render() {
+  render () {
     const columns = [
       {
         title: '序号',
@@ -167,9 +169,9 @@ class BasicTable extends Component {
         key: 'id',
         dataIndex: 'id',
         width: '15%',
-        render: val => (
+        render: (text, record, index) => (
           <span>
-            <Tag color="red" style={{ marginRight: '10px' }} onClick={this.delData.bind(this, val - 1)}>
+            <Tag color="red" style={{ marginRight: '10px' }} onClick={this.delData.bind(this, index)}>
               删除
             </Tag>
             <Tag color="blue" onClick={this.toAdd}>
@@ -180,7 +182,7 @@ class BasicTable extends Component {
       }
     ]
     return (
-      <div id="table">
+      <div id="table"  style={{ padding:'24px' }}>
         <div className="topBar" style={{ height: '50px' }}>
           <div className="item fl" style={{ paddingRight: '20px' }}>
             <span>姓名 : </span>

@@ -4,6 +4,10 @@ import asyncComponent from '../compoents/AsyncComponent'
 
 const routes = [
   {
+    path: '/admin/index/index',
+    component: asyncComponent(()=>import('../view/index/index.js'))
+  },
+  {
     path: '/admin/basic/form',
     component: asyncComponent(()=>import('../view/basic-form/index.js'))
   },

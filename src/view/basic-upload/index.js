@@ -72,7 +72,7 @@ class BasicUpload extends React.Component {
       </div>
     )
     return (
-      <div>
+      <div style={{ padding:'24px' }}>
         <div className="halfBlock">
           <Upload action="https://www.mocky.io/v2/5cc8019d300000980a055e76" listType="picture-card" fileList={fileList} onPreview={this.handlePreview} onChange={this.handleChange}>
             {fileList.length >= 8 ? null : uploadButton}

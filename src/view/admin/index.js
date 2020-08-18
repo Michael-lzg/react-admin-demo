@@ -31,7 +31,7 @@ class Admin extends Component {
           <Content className="site-layout-background"
             style={{
               margin: '24px 16px',
-              padding: 24,
+              padding: 0,
               minHeight: 280,
             }}
           >

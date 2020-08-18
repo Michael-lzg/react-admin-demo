@@ -46,7 +46,7 @@ class BasicForm extends Component {
     }
 
     return (
-      <div style={{ width: '600px' }}>
+      <div style={{ width: '600px', padding:'24px' }}>
         <Form {...layout} ref={this.formRef} name="basic" initialValues={{ remember: true }} onFinish={this.onFinish} onFinishFailed={this.onFinishFailed}>
           <Form.Item label="Username" name="username" rules={[{ required: true, message: 'Please input your username!' }]}>
             <Input />

@@ -5,7 +5,7 @@ const menus = [
   {
     title: '首页',
     icon: 'home',
-    key: '/admin'
+    key: '/admin/index/index'
   },
   {
     title: '基本组件',

@@ -13,7 +13,7 @@ class Login extends Component {
   }
 
   onFinish (values) {
-    this.props.history.push('/admin/basic/table')
+    this.props.history.push('/admin/index/index')
   }
 
   onFinishFailed (errorInfo) {
