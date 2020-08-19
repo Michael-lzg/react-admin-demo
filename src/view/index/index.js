@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import '../../css/index.scss'
-import { Tag, Progress } from 'antd';
+import ArticalList from '../../compoents/articalList'
+import { Tag, Progress, Tabs } from 'antd';
+const { TabPane } = Tabs;
 
 class AdminIndex extends Component {
 
@@ -9,7 +11,10 @@ class AdminIndex extends Component {
     this.state = {
 
     }
+  }
 
+  callback (key) {
+    console.log(key);
   }
 
   render () {
@@ -25,7 +30,7 @@ class AdminIndex extends Component {
     ]
     return (
       <div className="mainPage">
-        <div className="left-block">
+        <div className="left-block fl">
           <div className="left-top-block">
             <div className="img">
               <img src={require('../../img/admin.jpg')} alt="" width="120" />
@@ -69,6 +74,16 @@ class AdminIndex extends Component {
           </div>
         </div>
 
+
+        <div className="right-block fl">
+          <div className="tab">
+            <Tabs defaultActiveKey="1" onChange={this.callback.bind()}>
+            <TabPane tab="掘金文章" key="1">{<ArticalList />}</TabPane>
+              <TabPane tab="开源项目" key="2">
+                Content of Tab Pane 2</TabPane>
+            </Tabs>
+          </div>
+        </div>
 
       </div>
     );

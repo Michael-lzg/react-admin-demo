@@ -1,0 +1,21 @@
+.list {
+  height: 100%;
+  overflow: auto;
+  background-color: #fff;
+}
+
+.listItem {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  color: #333;
+}
+
+.title {
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+.content {
+  margin-top: 10px;
+}
+
